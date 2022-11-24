@@ -21,21 +21,21 @@
     },
     {
       "author": " Eric Elliott",
-      "imageLink": "../../assets/images/programming-types.jpg",
+      "imageLink": "../../assets/images/programming-typescript.jpg",
       "title": "Programming JavaScript Applications",
       "price": 19,
       "description": "Take advantage of JavaScript's power to build robust web-scale or enterprise applications that are easy to extend and maintain. By applying the design patterns outlined in this practical book, experienced JavaScript developers will learn how to write flexible and resilient code that’s easier—yes, easier—to work with as your code base grows."
     },
     {
       "author": "Addy Osmani",
-      "imageLink": "../../assets/images/design-patterns.jpg",
+      "imageLink": "../../assets/images/js-design-patterns.jpg",
       "title": "Learning JavaScript Design Patterns",
       "price": 32,
       "description": "With Learning JavaScript Design Patterns, you'll learn how to write beautiful, structured, and maintainable JavaScript by applying classical and modern design patterns to the language. If you want to keep your code efficient, more manageable, and up-to-date with the latest best practices, this book is for you."
     },
     {
       "author": "Boris Cherny",
-      "imageLink": "../../assets/images/programming-types.jpg",
+      "imageLink": "../../assets/images/programming-typescript.jpg",
       "title": "Programming TypeScript",
       "price": 28,
       "description": "Any programmer working with a dynamically typed language will tell you how hard it is to scale to more lines of code and more engineers. That’s why Facebook, Google, and Microsoft invented gradual static type layers for their dynamically typed JavaScript and Python code. This practical book shows you how one such type layer, TypeScript, is unique among them: it makes programming fun with its powerful static type system."
