@@ -35,8 +35,8 @@ const createMain = () => {
     const main = document.createElement("main");
     main.className = "main";
 
-    main.append(catalogueTitle(), createBookCard());
-    console.log(main)
+    main.append(catalogueTitle(), bookRneder());
+
     return main;
 }
 
@@ -53,51 +53,48 @@ const catalogueTitle = () => {
 /* Create a books catalogue */
 
 
-fetch('../../assets/data/books.json')
-    .then(response => {
-        return response.json();
-    })
-    .then(books => {
-        // console.log(books)
-        books.forEach(book => (createBookCard(book)));
-    });
+
 
 
 /* Create a single book card */
 
-const createBookCard = (book) => {
+function bookRneder() {
     const catalogueContainer = document.createElement("section");
     catalogueContainer.className = "catalogue-container";
-    const bookCard = document.createElement("div");
-    const bookCover = document.createElement("img");
-    const bookTitle = document.createElement("h3");
-    const bookAuthor = document.createElement("h4");
-    const bookPrice = document.createElement("p");
-    const bookBtnsContainer = document.createElement("div");
-    const btnShowMore = document.createElement("btn");
-    const btnAddToCart = document.createElement("btn");
 
-    bookCard.className = "book-card";
-    bookCover.className = "book-card-img";
-    bookTitle.className = "book-title";
-    bookAuthor.className = "book-author";
-    bookPrice.className = "book-price";
-    bookBtnsContainer.className = "book-btns-container";
-    btnShowMore.className = "btn, btn-show-more";
-    btnAddToCart.className = "btn, btn-add-to-cart";
-    // bookCover.src = `${book.imageLink}`;
-    // bookTitle.innerText = `${book.title}`;
-    // bookAuthor.innerText = `${book.author}`;
-    // bookPrice.innerText = `${book.price}`;
-    btnShowMore.textContent = "Show More";
-    btnAddToCart.textContent = "Add to Cart";
-
-    bookCard.append(bookAuthor, bookPrice, bookBtnsContainer, btnShowMore, btnAddToCart);
-    catalogueContainer.append(bookCard);
-
-    // console.log('somone called me')
-    // console.log(catalogueContainer);
-
+    fetch('../../assets/data/books.json')
+    .then(response => {
+        return response.json();
+    })
+    .then(books => {
+        books.forEach(book => {
+            const bookCard = document.createElement("div");
+            const bookCover = document.createElement("img");
+            const bookTitle = document.createElement("h3");
+            const bookAuthor = document.createElement("h4");
+            const bookPrice = document.createElement("p");
+            const bookBtnsContainer = document.createElement("div");
+            const btnShowMore = document.createElement("btn");
+            const btnAddToCart = document.createElement("btn");
+        
+            bookCard.className = "book-card";
+            bookCover.className = "book-card-img";
+            bookTitle.className = "book-title";
+            bookAuthor.className = "book-author";
+            bookPrice.className = "book-price";
+            bookBtnsContainer.className = "book-btns-container";
+            btnShowMore.className = "btn, btn-show-more";
+            btnAddToCart.className = "btn, btn-add-to-cart";
+            bookCover.src = book.imageLink
+            bookTitle.innerHTML = book.title;
+            bookAuthor.innerHTML = book.author;
+            bookPrice.innerText = book.price;
+            btnShowMore.textContent = "Show More";
+            btnAddToCart.textContent = "Add to Cart";
+            bookCard.append(bookCover, bookAuthor, bookPrice, bookBtnsContainer, btnShowMore, btnAddToCart);
+            catalogueContainer.append(bookCard);
+        });
+    });
     return catalogueContainer;
 }
 
@@ -121,3 +118,4 @@ const createFooter = () => {
 
     return footer;
 }
+
