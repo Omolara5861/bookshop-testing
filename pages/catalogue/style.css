@@ -1,0 +1,235 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0 auto;
+    width: 100%;
+    min-height: 100vh;
+    font-family: 'Noto Serif', serif;
+    font-size: 1.6rem;
+    color: #090909;
+    background: skyblue;
+}
+
+/* ============
+Global Styles
+==============*/
+
+img {
+    max-width: 100%;
+    /* min-height: 100%; */
+    display: block;
+}
+
+a {
+    text-decoration: none;
+    transition: all.2s ease-in-out;
+}
+
+/* ============
+Typography
+==============*/
+
+h1, h2 {
+    font-family: 'Literata', serif;
+}
+
+h1 {
+    text-transform: uppercase;
+    color: maroon;
+    font-size: 6rem;
+}
+
+h2 {
+    font-size: 6rem;
+}
+
+h3 {
+    font-size: 2.25rem;
+    font-weight: 700;
+}
+
+h4 {
+    font-size: 1.4rem;
+    font-weight: 500;
+}
+
+p {
+    font-size: 1.5rem;
+}
+
+/* ============
+Header
+==============*/
+
+header {
+    background: url("../../assets/images/bg-header.jpg") 100% 100%/cover no-repeat;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.welcome-msg {
+    text-shadow: 2px 2px skyblue;
+    margin-top: 4rem;
+}
+
+.btn-check {
+    font-size: 2rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    padding: 1.5rem 2.5rem;
+    background: transparent;
+    color: #fff;
+    border: 2px solid maroon;
+    border-radius: 2.5rem;
+    /* box-shadow: -1px 1px skyblue; */
+    text-shadow: 2px 2px maroon;
+    margin-bottom: 2rem;
+    cursor: pointer;
+    transition: all .5s linear;
+}
+
+.btn-check:hover,
+.btn-check:focus {
+    background: skyblue;
+    color: maroon;
+    font-weight: 700;
+    text-shadow: none;
+    border: transparent;
+    outline: none;
+}
+
+/* ============
+Main Block
+==============*/
+
+main {
+    background: maroon url("../../assets/images/bg-main.jpg") 100% 100%/cover no-repeat;
+    margin-right: 10rem;
+    min-height: 100vh;
+    width: 100%;
+    opacity: 0.75;
+    border-top: 5px solid maroon;
+}
+
+/* Books Catalogue */
+
+.catalogue-title {
+    color: white;
+    text-align: center;
+    margin: 4.5rem 0;
+}
+
+.catalogue-container {
+    width: 100%;
+    max-width: 152rem;
+    height: 100%;
+    margin: 0 auto;
+    background: transparent;
+    opacity: 0.9;
+    position: relative;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 3rem;
+}
+
+.book-card {
+    border: 1px solid maroon;
+    border-radius: .5rem;
+    transition: 0.7s linear;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: #e2e282;
+    width: 28rem;
+    height: 35rem;
+    border: 1px solid maroon;
+    border-radius: 1rem;
+    position: relative;
+}
+
+.book-card-img {
+    width: 26rem;
+    height: 20rem;
+    background: url("../../assets/images/effective-js.jpg") top/cover no-repeat;
+    object-fit: cover;
+    position: absolute;
+    top: 2%;
+}
+
+.book-title {
+    font-size: bold;
+    margin-bottom: 2rem;
+}
+
+.book-author {
+    order: -1;
+    margin-bottom: 2rem;
+}
+
+.book-price {
+    margin-bottom: 14rem;
+}
+
+.book-btns-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: space-between;
+    width: 23rem;
+}
+
+.btn {
+    padding: 1rem 2.5rem;
+    border-radius: 2.5rem;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+.btn-show-more {
+    font-size: 1.4rem;
+    font-style: italic;
+    color: maroon;
+    justify-content: flex-start;
+    background-color: transparent;
+    padding: 0;
+}
+
+.btn-add-to-cart {
+    background-color: maroon;
+}
+
+/* ============
+Footer
+==============*/
+
+.footer {
+    font-size: 1.4rem;
+    font-weight: 500;
+    background: maroon;
+    opacity: 0.75;
+    color: white;
+}
+
+.design-info {
+    width: 20rem;
+    height: 6rem;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
